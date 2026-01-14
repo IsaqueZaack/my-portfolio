@@ -1,6 +1,4 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
-import { green, purple } from '@mui/material/colors';
-
 let theme = createTheme({
   palette: {
     primary: {
@@ -11,8 +9,17 @@ let theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Helvetica Neue, sans-serif",
+  fontFamily: 'Inter, sans-serif',
+  h1: {
+    fontFamily: 'Poppins, sans-serif',
+    fontWeight: 300,
   },
+  h2: {
+    fontFamily: 'Poppins, sans-serif',
+    fontWeight: 300,
+  },
+},
+
 });
 
 theme = responsiveFontSizes(theme);
