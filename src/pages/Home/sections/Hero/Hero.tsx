@@ -1,6 +1,6 @@
 import DownloadIcon from '@mui/icons-material/Download';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/GridLegacy'
 import styled from "@emotion/styled"
 import Avatar from "../../../../assets/images/avatar.jpeg"
 import { Button, Container, Typography } from '@mui/material'
@@ -20,22 +20,28 @@ const Hero = () => {
   return (
     <>
       <StyledHero>
-        <Container>
+        <Container maxWidth="lg">
           <Grid container spacing={2}>
-            <Grid size={4}>
+            <Grid item xs={12} md={4}>
               <StyledImg src={Avatar} />
             </Grid>
-            <Grid size={8}>
+            <Grid item xs={12} md={8}>
               <Typography color="primary" variant="h1" textAlign="center">Isaque Paixão</Typography>
               <Typography color="primary" variant="h2" textAlign="center">I'm fullstack</Typography>
-              <Button>
-                <DownloadIcon />
+              <Grid container display="flex" justifyContent="center">
+                <Grid item xs={12} md={4} display="flex" justifyContent="center">
+                    <Button>
+                    <DownloadIcon />
                 Download CV
               </Button>
-              <Button>
-                <MailOutlineIcon />
+                </Grid>
+                <Grid item xs={12} md={4} display="flex" justifyContent="center">
+                  <Button>
+                  <MailOutlineIcon />
                 Contact me
               </Button>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Container>
